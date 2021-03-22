@@ -1,0 +1,41 @@
+<html>
+<head>
+<title>Ezo - Calc</title>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+</head>
+<body>
+  <h2>EZO Assessment - Simple Calculator</h2>
+   <div>
+    <p>Implemented operations:</p>
+    <table>
+    	<thead>
+    		<th>Operation</th><th>Description</th><th>Example</th>    		
+    	</thead>
+    	<tbody>
+    		<tr><td align="center">+</td><td>Plus operation</td><td>10 + 10</td></tr>
+    		<tr><td align="center">-</td><td>Minus operation</td><td>10 - 10</td></tr>
+    		<tr><td align="center">*</td><td>Multiplication operation</td><td>10 * 10</td></tr>
+    		<tr><td align="center">/</td><td>Division operation</td><td>10 / 10</td></tr>
+    		<tr><td align="center">^</td><td>Exponential operation</td><td>10 ^ 10</td></tr>
+    		<tr><td align="center">sqrt</td><td>Square root operation</td><td>sqrt(9)</td></tr>
+    		<tr><td align="center">()</td><td>Parentheses</td><td>100/(10*2)</td></tr>
+    	</tbody>    	 
+    </table> 
+    <p>Example of mathematical expression: sqrt(9)^3+100/(10*2)</p>   
+  </div>
+  <hr />
+  <form method="POST">
+    <label for="expression">Mathematical expression:</label> 
+    <input type="text" name="expression" size="50" th:value="${expression}"></input>
+    <label for="result">Result:</label>
+    <span th:text="${result}"></span>
+    <br />    
+    <br /> <button name="calculate" type="submit">Calculate</button>
+  </form>
+</body>
+</html>
