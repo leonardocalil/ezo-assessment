@@ -111,7 +111,7 @@ public class CalculatorSimple extends Calculator {
 					}					
 					if(lastOperator != 0 || ix == 0) {
 						String next = expression.substring(ix+1,ix+2);
-						Pattern pattern = Pattern.compile("[0-9]");
+						Pattern pattern = Pattern.compile("[0-9\\(]");
 						Matcher matcher = pattern.matcher(next);
 						if(!matcher.find()) {
 							throw new Exception("Check syntax: operation (-, +) in wrong position");

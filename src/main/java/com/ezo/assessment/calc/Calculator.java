@@ -96,12 +96,11 @@ public abstract class Calculator {
 			}
 			
 			if(lastOperator != null && !lastOperator.isEmpty()) {
-				result = calculate(valueA, expressonValue, lastOperator.charAt(0));
-				valueA = result;
+				result = calculate(valueA, expressonValue, lastOperator.charAt(0));				
 			} else {
 				result = expressonValue;
-				valueA = result;
 			}
+			valueA = result;
 			if(parseValue.length > 1) {
 				lastOperator = expression.split("\\|")[1];
 			}						
